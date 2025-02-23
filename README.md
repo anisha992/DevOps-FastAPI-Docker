@@ -109,5 +109,5 @@ jobs:
 ---
 
 ## References
-- [Dockerize FastAPI Guide]([https://hub.docker.com/](https://upessocs.github.io/#dir=/Lectures/DevOps%20CCVT/Unit%202/&file=023%20Dockerize%20python%20fastapi%20server%20with%20github%20actions%20and%20upload%20to%20docker%20registery.md))
+- [Dockerize FastAPI Guide](https://upessocs.github.io/#dir=/Lectures/DevOps%20CCVT/Unit%202/&file=023%20Dockerize%20python%20fastapi%20server%20with%20github%20actions%20and%20upload%20to%20docker%20registery.md)
 
