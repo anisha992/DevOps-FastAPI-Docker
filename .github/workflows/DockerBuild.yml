@@ -1,7 +1,6 @@
 name: Docker Image Build & Push
 
-on:
-  push:  # Runs on every push to the repository
+on: push  # Runs on every push to the repository
 
 jobs:
   build:
@@ -9,11 +8,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        
+
       - name: Log in to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        run: echo "${{ secrets.DOCKERTOKEN }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build and Push Docker Image
         run: |
-          docker build --cache-from ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest -t ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest .
           docker push ${{ secrets.DOCKER_USERNAME }}/fastapi-app:latest
